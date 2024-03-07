@@ -1,0 +1,16 @@
+
+<div class="row">
+  <div class="col-md-2">
+    <%= image_tag line_item.product.image.url, class: "img-thumbnail" %>
+  </div>
+  <div class="col-md-4">
+    <h4><%= line_item.product.name %></h4>
+    <p><%= line_item.product.description %></p>
+  </div>
+  <div class="col-md-2">
+    <p>Quantity: <%= line_item.quantity %></p>
+  </div>
+  <div class="col-md-2">
+    <p>Item Total: <%= humanized_money_with_symbol line_item.total_price %></p>
+  </div>
+</div>
