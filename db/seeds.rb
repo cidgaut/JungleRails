@@ -107,7 +107,7 @@ cat1.products.create!({
   As a defense mechanism the Enirthelda produces a thick, sticky wax.
   They rely on wind pollination to reproduce. Once pollinated, they grow fairly large, inedible nuts.",
   image: open_asset('plante_5.jpg'),
-  quantity: 8,
+  quantity: 0,
   price: 124.99
 })
 
