@@ -6,9 +6,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   namespace :admin do
-    get 'categories/index'
-    get 'categories/new'
-    get 'categories/create'
+    resources :categories, only: [:index, :new, :create]
   end
 
   get 'about', to: 'about#index'
