@@ -60,6 +60,20 @@
             <li><%= link_to 'Categories', [:admin, :categories], class: "nav-link" %></li>
           </ul>
         </li>
+        <% if current_user %>
+          <!-- If a user is logged in, display a "Log Out" button -->
+          <li class="nav-item">
+            <%= link_to 'Log Out', [:logout], class: "nav-link" %>
+          </li>
+        <% else %>
+          <!-- If no user is logged in, display a "Log In" and "Register" button -->
+          <li class="nav-item">
+            <%= link_to 'Log In', [:login], class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Register', [:signup], class: "nav-link" %>
+          </li>
+        <% end %>
         <li class="nav-item end-0">
           <%= link_to about_path, class: "nav-link " do %>
           About Us

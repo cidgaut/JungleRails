@@ -1,6 +1,15 @@
-<h1>Signup!</h1>
+<h1>Register!</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
+
+  <% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <strong>Registration failed:</strong>
+    <ul>
+      <li><%= flash[:alert] %></li>
+    </ul>
+  </div>
+  <% end %>
 
   <div class="form-group">
     <%= f.label :first_name, 'First Name:' %>
@@ -14,7 +23,7 @@
 
   <div class="form-group">
     <%= f.label :email, 'Email:' %>
-    <%= f.text_field :email, class: 'form-control' %>
+    <%= f.email_field :email, class: 'form-control' %>
   </div>
 
   <div class="form-group">
